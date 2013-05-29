@@ -4,6 +4,6 @@
 
 run command
 
-~php
+```php
 composer install
-~php
+```
