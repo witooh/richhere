@@ -15,3 +15,13 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::options('{uri}', function(){
+    exit();
+})->where('uri', '[\S\s]*');
+
+Route::get('auth', array('before'=>'auth.basic', function(){
+    return 'jack';
+}));
+
+

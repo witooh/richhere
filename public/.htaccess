@@ -16,9 +16,13 @@
 # http://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 # http://enable-cors.org/
 
-# <IfModule mod_headers.c>
-#    Header set Access-Control-Allow-Origin "*"
-# </IfModule>
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://richhere.dev"
+    #Header add Access-Control-Allow-Origin "http://richhere.dev"
+    #Header set Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, DELETE"
+    Header set Access-Control-Allow-Headers "Authorization"
+    #Header set WWW-Authenticate "Basic"
+</IfModule>
 
 # ------------------------------------------------------------------------------
 # | CORS-enabled images                                                        |
