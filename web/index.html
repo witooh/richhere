@@ -7,13 +7,8 @@
 
 <script type="text/javascript">
     console.log(btoa('witoo@outlook.com:VkgiupoF9'));
-    $.ajaxSetup({
-        beforeSend: function (xhr){
-            xhr.setRequestHeader("Authorization", "Basic " + btoa('witoo@outlook.com:VkgiupoF9'));
-        }
-    });
 	$.ajax({
-		url: 'http://localhost/richhere/public/auth',
+		url: '/public/auth',
 		success: function(data){
 			console.log(data);
 		}
